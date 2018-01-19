@@ -1,3 +1,17 @@
+
 <p>
-  {{ tulos }}
+  {{tulos}}
 </p>
+
+<p>
+  <img [src]="apitulos">
+</p>
+<!--Palauttaa tietyn päivän kaikkien Suomen rataverkon junien junanumerot-->
+<div class = "flex-container">
+  <h1>Train numbers for the trains on Finnish railroads on 2018-01-18 (first 20) </h1>
+  <div *ngFor="let tulos of junatulos; let i = index;">
+    <p *ngIf="i<20">
+      Train number: {{ tulos.trainNumber}} <br>
+    </p>
+  </div>
+</div>
